@@ -22,7 +22,6 @@
 #define BONE 0
 #define QWERTZ 1
 #define SYM 2
-#define NUM 2
 #define NAV 3
 #define FN  4
 #define SYS 5
@@ -160,7 +159,7 @@ ZMK_BEHAVIOR(dot_spc, macro,
 )
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
+#define SMART_NUM &smart_num SYM 0
 ZMK_BEHAVIOR(smart_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -169,10 +168,10 @@ ZMK_BEHAVIOR(smart_num, hold_tap,
 )
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+    bindings = <&num_word>, <&sl SYM>;  // reverse this for sticky-num on single tap
 )
 &num_word {  // num-word, requires PR #1451
-    layers = <NUM>;
+    layers = <SYM>;
     continue-list = <BSPC DEL DOT COMMA KP_PLUS KP_MINUS KP_MULTIPLY KP_DIVIDE LS(N0)>;
     ignore-modifiers;     
 };
@@ -313,7 +312,7 @@ ZMK_BEHAVIOR(sw_win, macro,
         ;
 )
 
-ZMK_CONDITIONAL_LAYER(NUM FN, SYS)
+ZMK_CONDITIONAL_LAYER(SYM FN, SYS)
 
 ZMK_LAYER(_BONE,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬───── ß ─────╮
