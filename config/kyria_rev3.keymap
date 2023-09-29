@@ -270,7 +270,7 @@ ZMK_BEHAVIOR(gtbrack, mod_morph,
 
 // tap: qmark | shift + tap: excl
 ZMK_BEHAVIOR(qexcl, mod_morph,
-    bindings = <&kp QMARK>, <&kp EXCL>;
+    bindings = <&kp UNDER>, <&kp EXCL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 // tap: € | shift + tap: $
@@ -321,26 +321,26 @@ ZMK_CONDITIONAL_LAYER(SYM FN, SYS)
 
 ZMK_LAYER(_BONE,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬───── ß ─────╮
-          &kp ESC       &kp J         &kp D         &kp U         &kp A         &kp X                                                                     &kp P         &kp H         &kp L         &kp M         &kp W         &kp RA(MINUS)    
+          &kp ESC       &kp J         &kp D         &kp U         &kp A         &kp X                                                                     &kp P         &kp H         &kp L         &kp M         &kp W         &kp MINUS    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &hml LGUI C   &hml LALT T   &hml LSHFT I  &hml LCTRL E  &kp O                                                                     &kp B         &hmr LCTRL N  &hmr RSHFT R  &hmr LALT S   &hmr LGUI G   &kp Q
      // ├─────────────┼─────────────┼─────────────┼───── ü ─────┼───── ä ─────┼───── ö ─────┼─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            __XXXX__     &kp F         &kp V         &kp LEFT_BRACKET  &kp SQT   &kp SEMI       __XXXX__     &to QWERTZ         __XXXX__     &kp LSHFT     &kp Z         &kp Y         &kp COMMA     &kp DOT       &kp K         &key_repeat
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &kp LSHFT     &mo SYM       &spc_morph    &lt NAV RET    SMART_NUM        SMART_NUM     &lt NAV BSPC  &smart_shft   &mo SYM       &mo FN
+                                                    &kp LSHFT     &mo SYM       &spc_morph    &lt NAV RET    SMART_NUM        SMART_NUM     &lt NAV BSPC  &sk LSHFT     &mo SYM       &mo FN
      //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
     ,                                          &inc_dec_kp RIGHT LEFT                                                                    &inc_dec_kp DOWN UP                        
     //                                               (       )                                                                               (       )
 )
-ZMK_LAYER(_QWERTZ,
+ZMK_LAYER(_QWERTY,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬───── ü ─────╮
-          &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T                                                                     &kp Z         &kp U         &kp I         &kp O         &kp P         &kp LEFT_BRACKET    
+          &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T                                                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp LEFT_BRACKET    
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼───── ö ─────┼───── ä ─────┤
           &kp TAB       &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G                                                                     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMI &kp SQT
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-           __XXXX__     &kp Y         &kp X         &kp C         &kp V         &kp B          __XXXX__     &to BONE           __XXXX__     &kp LSHFT     &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &key_repeat
+           __XXXX__     &kp Z         &kp X         &kp C         &kp V         &kp B          __XXXX__     &to BONE           __XXXX__     &kp LSHFT     &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &key_repeat
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &kp LSHFT     &mo SYM       &spc_morph    &lt NAV RET    SMART_NUM        SMART_NUM     &lt NAV BSPC  &smart_shft   &mo SYM       &mo FN
+                                                    &kp LSHFT     &mo SYM       &spc_morph    &lt NAV RET    SMART_NUM        SMART_NUM     &lt NAV BSPC  &sk LSHFT     &mo SYM       &mo FN
      //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
     ,                                          &inc_dec_kp RIGHT LEFT                                                                    &inc_dec_kp DOWN UP                        
     //                                               (       )                                                                               (       )
