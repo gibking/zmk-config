@@ -11,8 +11,16 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+/{
+    oled_pd: oled_pd {
+        compatible = "power-domain";
+        zephyr,pm-device-runtime-auto;
+    };
+};
+
 &led_strip {
     chain-length = <6>; //UG only
+    power-domain = <&oled_pd>;
     };
 &left_encoder {
     steps = <60>;
