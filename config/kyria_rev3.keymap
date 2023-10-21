@@ -42,14 +42,15 @@
 
 
 / {
-    chosen {
-        /delete-property/ zmk,default-power-domain;
+    oled_power_domain: oled_power_domain {
+        compatible = "power-domain";
+        /delete-property/ power-domain;
+        zephyr,pm-device-runtime-auto;
     };
 };
 &led_strip {
     chain-length = <6>; //UG only
-    power-domain = <&core_power_domain>;
-};
+    };
 &left_encoder {
     steps = <60>;
 };
@@ -57,6 +58,9 @@
     steps = <60>;
 };
 
+&oled {
+    power-domain = <&oled_power_domain>;
+}
 / {
     behaviors {
         rgb_encoder_hue: rgb_encoder_hue {
