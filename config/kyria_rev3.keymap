@@ -54,8 +54,6 @@
 / {
     oled_power_domain: oled_power_domain {
         compatible =  "power-domain";
-        startup-delay-us = <50000>;
-        off-on-delay-us = <50000>;
         zephyr,pm-device-runtime-auto;
     };
 };
