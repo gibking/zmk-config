@@ -51,14 +51,8 @@
     steps = <60>;
 };
 
-/ {
-    oled_power_domain: oled_power_domain {
-        compatible =  "power-domain";
-        zephyr,pm-device-runtime-auto;
-    };
-};
 &oled {
-    power-domain = <&oled_power_domain>;
+    /delete-property/ power-domain;
 };
 
 / {
