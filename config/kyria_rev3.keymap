@@ -41,18 +41,20 @@
 #define RGB_DEFAULT RGB_COLOR_HSB_VAL(240,100,20)
 
 
+/ {
+    chosen {
+        /delete-property/ zmk,default-power-domain;
+    };
+}
 &led_strip {
     chain-length = <6>; //UG only
+    power-domain = &core_power_domain;
 };
 &left_encoder {
     steps = <60>;
 };
 &right_encoder {
     steps = <60>;
-};
-
-&oled {
-    /delete-property/ power-domain;
 };
 
 / {
