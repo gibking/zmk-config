@@ -48,7 +48,7 @@
 };
 &led_strip {
     chain-length = <6>; //UG only
-    power-domain = &core_power_domain;
+    power-domain = <&core_power_domain>;
 };
 &left_encoder {
     steps = <60>;
