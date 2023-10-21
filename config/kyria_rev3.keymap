@@ -29,7 +29,7 @@
 
 &oled {
     power-domain = <&oled_power_domain>;
-}
+};
 
 / {
     keymap {
