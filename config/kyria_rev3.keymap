@@ -18,10 +18,13 @@
     };
 };
 
+&oled {
+    power-domain = <&oled_pd>;
+}
+
 &led_strip {
     chain-length = <6>; //UG only
-    power-domain = <&oled_pd>;
-    };
+};
 &left_encoder {
     steps = <60>;
 };
