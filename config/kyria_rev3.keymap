@@ -45,7 +45,7 @@
     chosen {
         /delete-property/ zmk,default-power-domain;
     };
-}
+};
 &led_strip {
     chain-length = <6>; //UG only
     power-domain = &core_power_domain;
