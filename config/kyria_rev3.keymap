@@ -10,13 +10,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/ {
-    oled_power_domain: oled_power_domain {
-        compatible = "power-domain";
-        /delete-property/ power-domain;
-        zephyr,pm-device-runtime-auto;
-    };
-};
 &led_strip {
     chain-length = <6>; //UG only
     };
@@ -27,9 +20,6 @@
     steps = <60>;
 };
 
-&oled {
-    power-domain = <&oled_power_domain>;
-};
 
 / {
     keymap {
