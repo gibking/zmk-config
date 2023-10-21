@@ -60,7 +60,7 @@
     };
 };
 &oled {
-    power-domain = &oled_power_domain;
+    power-domain = <&oled_power_domain>;
 };
 
 / {
