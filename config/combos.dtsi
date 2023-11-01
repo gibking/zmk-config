@@ -1,3 +1,4 @@
+#include "keys_de.h"
 #define COMBO_TERM_FAST 25
 #define COMBO_TERM_SLOW 50
 
@@ -11,7 +12,15 @@
               ╰────────────────────┴────────────────────╯           
 */
 
+
+ZMK_COMBO(c_esc, &kp ESC, 1 13, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(tab, &kp TAB, 13 25, ALL, COMBO_TERM_SLOW)
+
 ZMK_COMBO(ae, &kp SQT, 16 4, 0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(oe, &kp SEMI, 16 17, 0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(ue, &kp LEFT_BRACKET, 16 3, 0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(sz, &kp MINUS, 21 35, 0 1, COMBO_TERM_SLOW)
+
+ZMK_COMBO(sz2  , &kp DE_SZ, 10 22, 0 1, COMBO_TERM_SLOW)
+ZMK_COMBO(q, &kp Q, 22 38, 0 1, COMBO_TERM_SLOW)
+ZMK_COMBO(at, &kp DE_AT, 22 38, 2, COMBO_TERM_SLOW)
