@@ -260,7 +260,7 @@ ZMK_BEHAVIOR(fbslh, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 // ß and  (with SHFT)  
-ZMK_BEHAVIOR(fbslh, mod_morph,
+ZMK_BEHAVIOR(sz, mod_morph,
     bindings = <&kp DE_SZ>, <&kp DE_CAPITAL_SZ>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
@@ -296,7 +296,7 @@ ZMK_CONDITIONAL_LAYER(SYM FN, SYS)
 
 ZMK_LAYER(_BONE,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬───── ß ─────╮
-         &kp ESC       &kp J         &kp D         &kp U         &kp A         &kp X                                                                     &kp P         &kp H         &kp L         &kp M         &kp W         &kp DE_SZ    
+         &kp ESC       &kp J         &kp D         &kp U         &kp A         &kp X                                                                     &kp P         &kp H         &kp L         &kp M         &kp W         &sz    
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp TAB       &hml LGUI C   &hml LALT T   &hml LCTRL I  &hml LSHFT E  &kp O                                                                     &kp B         &hmr LSHFT N  &hmr LCTRL R  &hmr LALT S   &hmr LGUI G   &kp Q
     // ├─────────────┼─────────────┼─────────────┼───── ü ─────┼───── ä ─────┼───── ö ─────┼─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
