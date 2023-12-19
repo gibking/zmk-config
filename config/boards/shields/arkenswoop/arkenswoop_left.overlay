@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2022 Duccio Breschi
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "arkenswoop.dtsi"
+
+&kscan0 {
+    diode-direction = "col2row";
+    col-gpios
+        = <&pro_micro 15 (GPIO_ACTIVE_HIGH)> // COL0 B1
+        , <&pro_micro 18 (GPIO_ACTIVE_HIGH)> // COL1 F7
+        , <&pro_micro 19 (GPIO_ACTIVE_HIGH)> // COL2 F6
+        , <&pro_micro 20 (GPIO_ACTIVE_HIGH)> // COL3 F5
+        , <&pro_micro 21 (GPIO_ACTIVE_HIGH)> // COL4 F4
+    ;
+};
+
+&left_encoder {
+	status = "okay";
+};

@@ -1,0 +1,8 @@
+# Copyright (c) 2022 Duccio Breschi
+# SPDX-License-Identifier: MIT
+
+config SHIELD_ARKENSWOOP_LEFT
+    def_bool $(shields_list_contains,arkenswoop_left)
+
+config SHIELD_ARKENSWOOP_RIGHT
+    def_bool $(shields_list_contains,arkenswoop_right)
