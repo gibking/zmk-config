@@ -25,11 +25,24 @@
 ZMK_COMBO(c_esc, &kp ESC, LT4 LM4, ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(tab, &kp TAB, LM4 LB4, ALL, COMBO_TERM_SLOW)
 
-ZMK_COMBO(ae, &kp SQT, LM1 LT1, 0 1, COMBO_TERM_SLOW)
-ZMK_COMBO(oe, &kp SEMI, LM1 LM0, 0 1, COMBO_TERM_SLOW)
-ZMK_COMBO(ue, &kp LEFT_BRACKET, LM1 LT2, 0 1, COMBO_TERM_SLOW)
-ZMK_COMBO(sz, &sz, RM3 RB1, 0 1, COMBO_TERM_SLOW)
-
-ZMK_COMBO(sz2  , &sz, RT4 RM4, 0 1, COMBO_TERM_SLOW)
-ZMK_COMBO(q, &kp Q, RM4 RB4, 0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(at, &kp DE_AT, RM4 RB4, 2, COMBO_TERM_SLOW)
+
+//BONE
+ZMK_COMBO(sz_bone, &sz, RT4 RM4, 0, COMBO_TERM_SLOW)
+ZMK_COMBO(q_bone, &kp Q, RM4 RB4, 0, COMBO_TERM_SLOW)
+
+// QWERTY
+ZMK_COMBO(ae, &kp DE_A_UMLAUT, RM4 RB4, 1, COMBO_TERM_SLOW)
+ZMK_COMBO(ue, &kp DE_U_UMLAUT, RT4 RM4, 1, COMBO_TERM_SLOW)
+ZMK_COMBO(sz, &sz, RT3 RM3, 1, COMBO_TERM_SLOW)
+
+// COLEMAK
+ZMK_COMBO(ue, &kp RA(Y), RT3 RM3, 2, COMBO_TERM_SLOW)
+
+ZMK_BEHAVIOR(m_sch, mod_morph,
+    bindings = <&m_sch_lo>, <&m_sch_up>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_BEHAVIOR(m_sch_lo, macro, wait-ms = <0>; tap-ms = <0>; bindings = <&kp S &kp C &kp H >; )
+ZMK_BEHAVIOR(m_sch_up, macro, wait-ms = <0>; tap-ms = <0>; bindings = <&kp LS(S) &kp C &kp H >; )
+ZMK_COMBO(sch, &m_sch, LM2 LB2, 2, COMBO_TERM_SLOW)
