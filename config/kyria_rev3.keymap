@@ -283,6 +283,7 @@ ZMK_BEHAVIOR(paste, mod_morph,
 
 /* Switcher encoder */
 /* Encoder switches windows */
+/*
 / {
     behaviors {
         switcher: switcher {
@@ -299,7 +300,7 @@ ZMK_BEHAVIOR(alttab, tri_state,
 ZMK_BEHAVIOR(alttab_p, tri_state,
     bindings = <&kp LALT>, <&kp LS(TAB)>, <&kt LALT>;
 )
-
+*/
 
 ZMK_CONDITIONAL_LAYER(NAV FN, SYS)
 
@@ -354,7 +355,7 @@ ZMK_LAYER(_NAV,
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     ________      ________      ________      ________      ________          ________      ________      ________      ________      ________  
     //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
-    ,                                                 &switcher                                                                                                    &inc_dec_kp LC(Z) LC(Y)  //UNDO REDO                        
+    ,                                                 &inc_dec_kp LA(TAB) LS(LA(TAB))                                                                                                   &inc_dec_kp LC(Z) LC(Y)  //UNDO REDO                        
     //                                               (       )                                                                                                                        (       )
 )
 
