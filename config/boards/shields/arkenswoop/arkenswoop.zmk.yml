@@ -9,5 +9,6 @@ features:
   - keys
   - encoder
 siblings:
+  - arkenswoop_central
   - arkenswoop_left
   - arkenswoop_right

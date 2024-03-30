@@ -6,6 +6,12 @@
 
 #include "arkenswoop.dtsi"
 
+/ {
+	chosen {
+		zephyr,display = &oled;
+	};
+};
+
 &default_transform {
     col-offset = <5>;
 };

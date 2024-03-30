@@ -1,7 +1,7 @@
 # Copyright (c) 2022 Duccio Breschi
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ARKENSWOOP_LEFT
+if SHIELD_ARKENSWOOP_CENTRAL
 
 config ZMK_KEYBOARD_NAME
     default "arkenswoop"
@@ -9,6 +9,9 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_SPLIT
+    default y
+    
 endif
 
 if SHIELD_ARKENSWOOP_LEFT || SHIELD_ARKENSWOOP_RIGHT
