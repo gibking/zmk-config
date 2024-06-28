@@ -13,8 +13,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keys_de.h"
 #include <dt-bindings/zmk/bt.h>
-#include "combos.dtsi"
 #include "mouse.dtsi"
+#include "combos.dtsi"
 #if __has_include("extras-arkenswoop.dtsi")
 #include "extras-arkenswoop.dtsi"
 #endif
