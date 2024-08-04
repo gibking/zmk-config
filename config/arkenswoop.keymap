@@ -14,7 +14,7 @@
 #include "keys_de.h"
 #include <dt-bindings/zmk/bt.h>
 #include "mouse.dtsi"
-#include "combos.dtsi"
+#include "arkenswoop_combos.dtsi"
 #if __has_include("extras-arkenswoop.dtsi")
 #include "extras-arkenswoop.dtsi"
 #endif
@@ -268,6 +268,10 @@ ZMK_BEHAVIOR(alttab_p, tri_state,
     bindings = <&kp LALT>, <&kp LS(TAB)>, <&kt LALT>;
 )
 
+ZMK_BEHAVIOR(m_vi_wq, macro, bindings = <&kp W &kp Q &kp ENTER >; )
+ZMK_BEHAVIOR(m_vi_q, macro, bindings = <&kp Q &kp DE_EXCL &kp ENTER >; )
+
+
 ZMK_CONDITIONAL_LAYER(LSYM LNAV, LFN)
 
 ZMK_LAYER(BONE,
@@ -290,7 +294,7 @@ ZMK_LAYER(QWERTY,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &kp G              &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI DE_OUML 
     // ├─────────────┼─────────────┼───── ü ─────┼───── ä ─────┼───── ö ─────┤    ├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┤
-         &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N         &kp M         &kp COMMA     &kp DOT       &kp DE_MINUS       
+         &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N         &kp M         &kp COMMA     &kp DOT       &kp DE_AUML       
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┬─────────────┼─────────────┼─────────────┼─────────────╯
                                       ________      ________      ________           ________      ________      ________   
     //                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
@@ -342,9 +346,9 @@ ZMK_LAYER(NAV,
 
 ZMK_LAYER(FN,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-         &kp F12       &kp F7        &kp F8        &kp F9        &kp PSCRN           &kp CAPS      U_WH_D        U_MS_U        U_WH_U        U_WH_R   
+         &kp F12       &kp F7        &kp F8        &kp F9        &kp PSCRN           &kp CAPS      U_WH_D        U_MS_U        U_WH_U       &m_vi_wq   
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &kp F11       &kp F4        &kp F5        &kp F6        &kp SLCK            &kp KP_NUM    U_MS_L        U_MS_D        U_MS_R        ________   
+         &kp F11       &kp F4        &kp F5        &kp F6        &kp SLCK            &kp KP_NUM    U_MS_L        U_MS_D        U_MS_R       &m_vi_q   
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp F10       &kp F1        &kp F2        &kp F3        &kp PAUSE_BREAK     ________      &mkp MB4      &mkp MCLK     &mkp MB5      ________   
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
