@@ -268,8 +268,8 @@ ZMK_BEHAVIOR(alttab_p, tri_state,
     bindings = <&kp LALT>, <&kp LS(TAB)>, <&kt LALT>;
 )
 
-ZMK_BEHAVIOR(m_vi_wq, macro, bindings = <&kp W &kp Q &kp ENTER >; )
-ZMK_BEHAVIOR(m_vi_q, macro, bindings = <&kp Q &kp DE_EXCL &kp ENTER >; )
+ZMK_BEHAVIOR(m_vi_wq, macro, bindings = <&kp LS(DOT) &kp W &kp Q &kp ENTER >; )
+ZMK_BEHAVIOR(m_vi_q, macro, bindings = <&kp LS(DOT) S&kp Q &kp DE_EXCL &kp ENTER >; )
 
 
 ZMK_CONDITIONAL_LAYER(LSYM LNAV, LFN)
