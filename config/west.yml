@@ -1,11 +1,27 @@
 manifest:
   remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: gibking
+      url-base: https://github.com/gibking
   projects:
     - name: zmk
       remote: urob
-      revision: main
+      revision: going-modular
       import: app/west.yml
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: main
+    - name: zmk-tri-state
+      remote: urob
+      revision: main
+    - name: zmk-arkenswoop-module
+      remote: gibking
+      revision: main
   self:
     path: config
