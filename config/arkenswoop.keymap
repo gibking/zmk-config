@@ -83,6 +83,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 /* Caps-word, num-word and smart-mouse */
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_BEHAVIOR(smart_shft, mod_morph,
     bindings = <&sk LSHFT>, <&caps_word>;
@@ -123,12 +126,6 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA DE_PLUS DE_MINUS DE_STAR DE_FSLH LS(N0)>;
     ignore-modifiers;     
 };
-
-
-ZMK_BEHAVIOR(smart_shft, mod_morph,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
-)
 
 
 /* BLUETOOTH MACROS */
