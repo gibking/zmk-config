@@ -334,11 +334,11 @@ ZMK_LAYER(_BONE,
 
 ZMK_LAYER(_COLEMAK,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-         &kp ESC       &kp Q         &kp W         &kp F         &kp P         &kp B                                                                     &kp J         &kp L         &kp U         &kp Z         &fbslh        &kp DE_UUML
+         &kp ESC       &kp Q         &kp W         &kp F         &kp P         &kp B                                                                     &kp J         &kp L         &kp U         &kp Z         &sz           &kp DE_UUML
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &kp TAB       &hml LGUI A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G                                                                     &kp M         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI O   &kp DE_OUML
+         &kp TAB       &hml LGUI A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G                                                                     &kp M         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI O   &kp DE_AUML
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          __XXXX__     &kp Y         &kp X         &kp C         &kp D         &kp V         &to QWERTZ     __XXXX__          __XXXX__      __XXXX__     &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH     &kp DE_AUML
+          __XXXX__     &kp Y         &kp X         &kp C         &kp D         &kp V         &to QWERTZ     __XXXX__          __XXXX__      __XXXX__     &kp K         &kp H         &kp COMMA     &kp DOT       &fbslh        &kp DE_OUML
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     __XXXX__     &mo SYS       &lt_spc SYM 0 &lt NAV RET    __XXXX__          __XXXX__     &lt NAV BSPC  &smart_shft   &mo SYS        __XXXX__ 
     //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
