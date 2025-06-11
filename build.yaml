@@ -12,5 +12,14 @@
 #     shield: reviung41
 #
 ---
-board: [ "nice_nano_v2" ]
-shield: [ "arkenswoop_left", "arkenswoop_right", "nice_view_adapter", "nice_view", "kyria_rev3_left", "kyria_rev3_right", "settings_reset" ]
+include:
+  - board: nice_nano_v2
+    shield: arkenswoop_left nice_view_adapter nice_view
+  - board: nice_nano_v2
+    shield: arkenswoop_right nice_view_adapter nice_view
+  - board: nice_nano_v2
+    shield: kyria_rev3_left
+  - board: nice_nano_v2
+    shield: kyria_rev3_right
+  - board: nice_nano_v2
+    shield: settings_reset
