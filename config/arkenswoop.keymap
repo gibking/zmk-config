@@ -41,7 +41,7 @@
 #define QUICK_TAP_MS 175
 
 &sk {  // sticky-key config
-    release-after-ms = <900>;  // release after 0.6s
+    release-after-ms = <900>;  // release after 0.9s
     quick-release;             // no double capitalization when rolling keys
 };
 
@@ -109,6 +109,9 @@ ZMK_BEHAVIOR(dot_spc, macro,
     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
 )
 
+ZMK_TAP_DANCE(td_s,
+    bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+)
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 
 #define SMART_NUM &smart_num SYM 0

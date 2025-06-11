@@ -8,16 +8,10 @@ manifest:
       url-base: https://github.com/gibking
   projects:
     - name: zmk
-      remote: urob
-      revision: going-modular
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
-    - name: zmk-auto-layer
-      remote: urob
-      revision: main
     - name: zmk-helpers
-      remote: urob
-      revision: main
-    - name: zmk-tri-state
       remote: urob
       revision: main
     - name: zmk-arkenswoop-module

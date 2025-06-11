@@ -1,3 +1,4 @@
 config/extras.dtsi
 config/extras-arkenswoop.dtsi
 build/
+config/boards.bak
