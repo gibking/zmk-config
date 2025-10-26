@@ -1,4 +1,6 @@
 manifest:
+  defaults:
+    revision: v0.3.0
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -6,22 +8,23 @@ manifest:
       url-base: https://github.com/urob
     - name: gibking
       url-base: https://github.com/gibking
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
       import: app/west.yml
     - name: zmk-auto-layer
-      remote: urob
       revision: main
     - name: zmk-helpers
-      remote: urob
       revision: main
     - name: zmk-tri-state
-      remote: urob
       revision: main
     - name: zmk-arkenswoop-module
       remote: gibking
+      revision: main
+    - name: zmk-dongle-screen
+      remote: janpfischer
       revision: main
   self:
     path: config
