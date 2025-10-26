@@ -15,11 +15,11 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
     - name: zmk-auto-layer
-      revision: main
+      remote: urob
     - name: zmk-helpers
-      revision: main
+      remote: urob
     - name: zmk-tri-state
-      revision: main
+      remote: urob
     - name: zmk-arkenswoop-module
       remote: gibking
       revision: main
